@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle + ' : '+ appointment?.appointmentt}}
+  </div>
+  <div class='card-body'
+       *ngIf='appointment'>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class='row'>
+          <div class='col-md-4'>Doctors-Name:</div>
+          <div class='col-md-8'>{{appointment.Doctors}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>appointment:</div>
+          <div class='col-md-8'>{{appointment.appointmentt}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>day:</div>
+          <div class='col-md-8'>{{appointment.Day}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Findings:</div>
+          <div class='col-md-8'>{{appointment.diagonosiss}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>unit-section:</div>
+          <div class='col-md-8'>{{appointment.unit}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='card-footer'>
+    <button class='btn btn-outline-secondary'
+            style='width:80px'
+            (click)='onBack()'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  </div>
+</div>

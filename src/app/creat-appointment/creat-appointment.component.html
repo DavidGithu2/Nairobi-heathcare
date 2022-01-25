@@ -1,0 +1,155 @@
+<div class="card">
+  <div class="card-header">
+    Add Appointments!
+  </div>
+
+  <div class="card-body" >
+    <form #form ="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="firstNameId">Doctors Name</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="firstNameId"
+                 #nameField="ngModel"
+                 name="Doctor"
+                 type="text"
+                 required
+                 minlength="3"
+                 [(ngModel)]="appointment.Doctor"
+                 [class.field-error]="form.submitted && nameField.invalid"
+                  />
+            <div [hidden]="!form.submitted || nameField.valid"
+             class="alert alert-danger">
+              Please enter the name of the Doctor.
+            </div>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="lastNameId">Appointment</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="lastNameId"
+                 name="appointmentt"
+                 type="text"
+                 #nameField="ngModel"
+                 required
+                 maxlength="50"
+                [(ngModel)]="appointment.appointmentt"
+                [class.field-error]="form.submitted && nameField.invalid"/>
+
+            <div [hidden]="!form.submitted || nameField.valid"
+            class="alert alert-danger">
+             Please fill out your appointments.
+           </div>
+
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="lastNameId">Day of the week</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="lastNameId"
+                 name="Day"
+                 type="text"
+                 #nameField="ngModel"
+                 required
+                 maxlength="50"
+                 [(ngModel)]="appointment.Day"
+                 [class.field-error]="form.submitted && nameField.invalid"
+                 />
+
+                 <span class="invalid-feedback">
+                  <span >
+                    day is Missing.
+                  </span>
+
+                  </span>
+        </div>
+        </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="lastNameId">Unit</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="lastNameId"
+                 name="unit"
+                 type="number"
+                 min="3" max="900"
+                 required
+                 maxlength="50"
+                 [(ngModel)]="appointment.unit"
+                  />
+          <span class="invalid-feedback">
+            <span >
+              Please enter your last name.
+            </span>
+            <span >
+              The last name must be less than 50 characters.
+            </span>
+          </span>
+        </div>
+      </div>
+
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="lastNameId">Description</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="lastNameId"
+                 name="diagonosiss"
+                 type="text"
+                 required
+                 maxlength="50"
+                 [(ngModel)]="appointment.diagonosiss"
+                />
+          <span class="invalid-feedback">
+            <span >
+              Please enter your last name.
+            </span>
+            <span>
+              The last name must be less than 50 characters.
+            </span>
+          </span>
+        </div>
+      </div>
+ <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="lastNameId">Status</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="lastNameId"
+                 type="text"
+                 name="status"
+                 required
+                 [(ngModel)]="appointment.status"
+                 />
+          <span class="invalid-feedback">
+          </span>
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <div class="offset-md-2 col-md-4">
+          <button class="btn btn-primary mr-3"
+                  type="submit"
+                  style="width:80px"
+                  (click)='navigate()'
+
+                  >
+            Save
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+

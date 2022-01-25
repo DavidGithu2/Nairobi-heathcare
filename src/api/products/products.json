@@ -1,0 +1,38 @@
+[
+  {
+  "doctorsId": 1,
+  "appointmentt": "x-lay",
+   "Day" :"Wednesday",
+   "unit": 230,
+   "diagonosiss":"mararia",
+   "status":"Active",
+   "Doctors": "Dr.Allan"
+  },
+  {
+  "doctorsId": 5,
+  "appointmentt":"maternety-unit",
+  "Day" :"Friday",
+  "unit":  930,
+   "diagonosiss":"HIV",
+   "status":"Active",
+   "Doctors": "Dr. Ivy"
+ },
+ {
+  "doctorsId": 2,
+  "appointmentt":"Cancer-unit",
+  "Day" :"Monday",
+  "unit":  102,
+   "diagonosiss":"hypothenesis",
+   "status":"Active",
+   "Doctors": "Dr. Adriel"
+ },
+ {
+  "doctorsId": 3,
+  "appointmentt":"spinal",
+  "Day" :"Thusday",
+  "unit": 103,
+   "diagonosiss":"injury",
+   "status":"Active",
+   "Doctors": "Dr. sarah"
+ }
+]
